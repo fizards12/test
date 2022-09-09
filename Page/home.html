@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>home</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <div class="modal-container flx">
+    <div class="modal">
+      <div class="modal-hd flx">
+        <i class="bi bi-gear"></i>
+        <h1 class="flx">
+          Settings
+          <div class="flx">
+            <a onclick="closeModal(event)" class="cls" href="#"><i class="bi bi-x-circle"></i></a>
+            <a onclick="modalHeaderAnchorClick(this)" class="left" href="#"><i class="bi bi-arrow-left-circle"></i></a>
+            <a onclick="modalHeaderAnchorClick(this)" class="right" href="#"><i class="bi bi-arrow-right-circle"></i></a>
+          </div>
+        </h1>
+      </div>
+      <div class="modal-body">
+        <div class="chng-user slide">
+          <form class="user-form">
+            <div class="form-body flx">
+              <div class="flx input">
+                <label>New Username</label>
+                <div class="flx">
+                  <i class="bi bi-person-plus"></i>
+                  <input type="text" placeholder="Type the new username" />
+                </div>
+              </div>
+              <div class="flx input">
+                <label>Confirm Password</label>
+                <div class="flx">
+                  <i class="bi bi-lock-fill"></i>
+                  <input type="password" placeholder="Type the password" />
+                </div>
+              </div>
+            </div>
+            <div class="btn flx">
+              <input class="save-btn" type="submit" name="chng-user" value="Save" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-main slide">
+          <a onclick="goToPropertyPage(this)" class="anc user-anc flx chng" href="#" name="user">
+            <div>
+              <img src="../media/svg/user-color.svg" alt="user-logo" />
+            </div>
+            <h1>Change Username</h1>
+          </a>
+          <a onclick="goToPropertyPage(this)" class="anc pwd-anc flx chng" href="#" name="pwd">
+            <div>
+              <img src="../media/svg/password-color.svg" alt="user-logo" />
+            </div>
+            <h1>Change Username</h1>
+          </a>
+        </div>
+        <div class="chng-pw slide">
+          <form class="pwd-form">
+            <div class="form-body flx">
+              <div class="flx input">
+                <label>Username</label>
+                <div class="flx">
+                  <i class="bi bi-person-plus"></i>
+                  <input type="text" placeholder="Type the new username" name="username" />
+                </div>
+              </div>
+              <div class="flx input">
+                <label>Password</label>
+                <div class="flx">
+                  <i class="bi bi-lock-fill"></i>
+                  <input type="password" placeholder="Type the password" name="old-pwd" />
+                </div>
+              </div>
+              <div class="flx input">
+                <label>New Password</label>
+                <div class="flx">
+                  <i class="bi bi-person-plus"></i>
+                  <input type="password" placeholder="Type new password" name="new-pwd" />
+                </div>
+              </div>
+              <div class="flx input">
+                <label>Confirm New Password</label>
+                <div class="flx">
+                  <i class="bi bi-person-plus"></i>
+                  <input type="password" placeholder="Confirm new password" name="confirm-pwd" />
+                </div>
+              </div>
+            </div>
+            <div class="btn flx">
+              <input class="save-btn" type="submit" name="chng-pwd" value="Save" />
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  <nav class="navbar">
+    <div class="full">
+      <div class="home-icons flx">
+        <div class="flx">
+          <div class="mini-logo">
+            <img src="../media/svg/logo.svg" alt="min-logo" />
+          </div>
+          <ul class="icons flx">
+            <li>
+              <a href="#about"><i class="bi bi-info-circle-fill"></i></a>
+            </li>
+            <li>
+              <a href="#guide"><i class="bi bi-book"></i></a>
+            </li>
+            <li>
+              <a href="#team"><i class="bi bi-people-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-div flx">
+          <div class="menu flx">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <ul class="icons mini-lnks flx">
+            <li><a href="#">Configuration</a></li>
+            <li><a onclick="openModal(event)" href="#">Setting</a></li>
+            <li><a href="login.html">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-header flx">
+        <div class="logo-hd">
+          <img src="../media/website name.png" alt="Logo" />
+        </div>
+        <ul class="pages flx">
+          <li><a href="#">Configuration</a></li>
+          <li><a onclick="openModal(event)" href="#">Setting</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="body">
+    <div class="container">
+      <section id="about" class="sec">
+        <h1 class="sec-hdr">About Project</h1>
+        <div class="sec-body flx">
+          <div class="words-area">
+            <p>
+              The network devices can be controlled by using telnet or a
+              console cable but in this project used techniqe of the
+              automation. The automation is very exciting and very new in the
+              network world,where the automation is just tools in order to
+              succeed at your job and to do a lot better and remotely .
+              Autonet web site is an automated tool To be able to control
+              network devices remotely.
+            </p>
+            <div>
+              <h3>Features of AUTONET:</h3>
+              <ul>
+                <li>
+                  <span>configuration for any device in the network.</span>
+                </li>
+                <li><span>suitable for lab or mobie phone.</span></li>
+                <li>
+                  <span>
+                    change shutdown mode for any interfaces in switching or
+                    router, the speed of them , password of the device ,and We
+                    can do a lot of tasks.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="img-area">
+            <img src="../media/connection.jpeg" alt="Network-connections" />
+          </div>
+        </div>
+      </section>
+      <section id="guide" class="sec">
+        <h1 class="sec-hdr">Guidlines</h1>
+        <div class="sec-body">
+          <ol>
+            <li><span>Click on Start Configuration.</span></li>
+            <li>
+              <span>Choose the Building or Floor that you need to edit.</span>
+            </li>
+            <li><span>Enter the data to be update.</span></li>
+            <li>
+              <p>Click on View to check the data.</p>
+              <div>
+                <img src="../media/1.png" alt="Configuration Page" />
+              </div>
+            </li>
+            <li>
+              <p>Click on Run&Save to update the network.</p>
+              <div>
+                <img src="../media/2.png" alt="Configuration Page" />
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section id="team" class="sec">
+        <h1 class="sec-hdr">Team members</h1>
+        <div class="sec-body flx">
+          <div class="card">
+            <div class="face">
+              <div>
+                <img src="../media/mahmoud.jpeg" alt="mahmoud card" />
+              </div>
+              <p>Mahmoud Sameh</p>
+            </div>
+            <div class="back flx">
+              <div class="info-box flx">
+                <div>
+                  <h1 class="info-header">Mahmoud Sameh</h1>
+                  <p style="color: gray">Full Stack Engineer</p>
+                </div>
+                <div class="info-body">
+                  <div class="item flx">
+                    <span>Email:</span>
+                    <a href="mailto: mahmoudsameh734@gmail.com">Mail me</a>
+                  </div>
+                  <div class="item flx">
+                    <span>LinkedIn:</span>
+                    <a href="#">Mahmoud Sameh</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face">
+              <div>
+                <img src="../media/mahmedresized-image-Promo.jpeg" alt="mahmoud card" />
+              </div>
+              <p>Mohamed Tarek</p>
+            </div>
+            <div class="back flx">
+              <div class="info-box flx">
+                <div>
+                  <h1 class="info-header">Mohamed Tarek</h1>
+                  <p style="color: gray">Data Science Engineer</p>
+                </div>
+                <div class="info-body">
+                  <div class="item flx">
+                    <span>Email:</span>
+                    <a href="mailto: mahmoudsameh734@gmail.com">Mail me</a>
+                  </div>
+                  <div class="item flx">
+                    <span>LinkedIn:</span>
+                    <a href="#">Mohamed Tarek</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face">
+              <div>
+                <img src="../media/Bob.jpeg" alt="mahmoud card" />
+              </div>
+              <p>Abanob Victor</p>
+            </div>
+            <div class="back flx">
+              <div class="info-box flx">
+                <div>
+                  <h1 class="info-header">Abanob Victor</h1>
+                  <p style="color: gray">Network Engineer</p>
+                </div>
+                <div class="info-body">
+                  <div class="item flx">
+                    <span>Email:</span>
+                    <a href="mailto: mahmoudsameh734@gmail.com">Mail me</a>
+                  </div>
+                  <div class="item flx">
+                    <span>LinkedIn:</span>
+                    <a href="#">Abanob Victor</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face">
+              <div>
+                <img src="../media/mahmoud.jpeg" alt="mahmoud card" />
+              </div>
+              <p>Mahmoud Sameh</p>
+            </div>
+            <div class="back flx">
+              <div class="info-box flx">
+                <div>
+                  <h1 class="info-header">Mahmoud Sameh</h1>
+                  <p style="color: gray">Full Stack Engineer</p>
+                </div>
+                <div class="info-body">
+                  <div class="item flx">
+                    <span>Email:</span>
+                    <a href="mailto: mahmoudsameh734@gmail.com">Mail me</a>
+                  </div>
+                  <div class="item flx">
+                    <span>LinkedIn:</span>
+                    <a href="#">Mahmoud Sameh</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face">
+              <div>
+                <img src="../media/mahmedresized-image-Promo.jpeg" alt="mahmoud card" />
+              </div>
+              <p>Mohamed Tarek</p>
+            </div>
+            <div class="back flx">
+              <div class="info-box flx">
+                <div>
+                  <h1 class="info-header">Mohamed Tarek</h1>
+                  <p style="color: gray">Data Science Engineer</p>
+                </div>
+                <div class="info-body">
+                  <div class="item flx">
+                    <span>Email:</span>
+                    <a href="mailto: mahmoudsameh734@gmail.com">Mail me</a>
+                  </div>
+                  <div class="item flx">
+                    <span>LinkedIn:</span>
+                    <a href="#">Mohamed Tarek</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face">
+              <div>
+                <img src="../media/Bob.jpeg" alt="mahmoud card" />
+              </div>
+              <p>Abanob Victor</p>
+            </div>
+            <div class="back flx">
+              <div class="info-box flx">
+                <div>
+                  <h1 class="info-header">Abanob Victor</h1>
+                  <p style="color: gray">Network Engineer</p>
+                </div>
+                <div class="info-body">
+                  <div class="item flx">
+                    <span>Email:</span>
+                    <a href="mailto: mahmoudsameh734@gmail.com">Mail me</a>
+                  </div>
+                  <div class="item flx">
+                    <span>LinkedIn:</span>
+                    <a href="#">Abanob Victor</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face">
+              <div>
+                <img src="../media/mahmoud.jpeg" alt="mahmoud card" />
+              </div>
+              <p>Mahmoud Sameh</p>
+            </div>
+            <div class="back flx">
+              <div class="info-box flx">
+                <div>
+                  <h1 class="info-header">Mahmoud Sameh</h1>
+                  <p style="color: gray">Full Stack Engineer</p>
+                </div>
+                <div class="info-body">
+                  <div class="item flx">
+                    <span>Email:</span>
+                    <a href="mailto: mahmoudsameh734@gmail.com">Mail me</a>
+                  </div>
+                  <div class="item flx">
+                    <span>LinkedIn:</span>
+                    <a href="#">Mahmoud Sameh</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face">
+              <div>
+                <img src="../media/mahmedresized-image-Promo.jpeg" alt="mahmoud card" />
+              </div>
+              <p>Mohamed Tarek</p>
+            </div>
+            <div class="back flx">
+              <div class="info-box flx">
+                <div>
+                  <h1 class="info-header">Mohamed Tarek</h1>
+                  <p style="color: gray">Data Science Engineer</p>
+                </div>
+                <div class="info-body">
+                  <div class="item flx">
+                    <span>Email:</span>
+                    <a href="mailto: mahmoudsameh734@gmail.com">Mail me</a>
+                  </div>
+                  <div class="item flx">
+                    <span>LinkedIn:</span>
+                    <a href="#">Mohamed Tarek</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face">
+              <div>
+                <img src="../media/Bob.jpeg" alt="mahmoud card" />
+              </div>
+              <p>Abanob Victor</p>
+            </div>
+            <div class="back flx">
+              <div class="info-box flx">
+                <div>
+                  <h1 class="info-header">Abanob Victor</h1>
+                  <p style="color: gray">Network Engineer</p>
+                </div>
+                <div class="info-body">
+                  <div class="item flx">
+                    <span>Email:</span>
+                    <a href="mailto: mahmoudsameh734@gmail.com">Mail me</a>
+                  </div>
+                  <div class="item flx">
+                    <span>LinkedIn:</span>
+                    <a href="#">Abanob Victor</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="flx">
+    <div class="col-1">
+      <p>Supervised By</p>
+      <p>Dr.Onsy Ahmed Abd-Aleem</p>
+    </div>
+    <div class="col-2">
+      <img src="../media/website name.png" alt="logo" />
+    </div>
+    <div class="col-3">
+      <p>Created By</p>
+      <p>Alaa Osama Mohamed</p>
+      <p>Nouran Ebrahim Elmohamedy</p>
+      <p>Mohamed Tarek Tolba</p>
+      <p>Mahmoud Sameh</p>
+    </div>
+  </footer>
+  <script src="../js/home.js">
+  </script>
+</body>
+
+</html>

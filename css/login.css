@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.flx {
+    display: flex;
+}
+
+.flx-column {
+    flex-direction: column;
+}
+
+.container {
+
+    height: 100%;
+    background-image: url("../media/login-xlarg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.box-container {
+    width: 480px;
+    height: 580px;
+    background-color: #E5E5E5;
+    border-radius: 60px;
+    margin: auto;
+}
+
+.body {
+    padding: 50px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 100%;
+}
+
+.logo {
+    width: 225px;
+}
+
+form {
+    width: 100%;
+}
+
+.input-box {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.input-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(110, 110, 110, 0.343);
+}
+
+label {
+    color: #6E6E6E;
+    font-size: 23px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Times New Roman';
+}
+
+.input {
+    height: 50px;
+    background-color: transparent;
+    border: 0px;
+    outline-width: 0px;
+    position: relative;
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 19px;
+}
+
+.input::placeholder {
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.input:focus {
+    background-color: rgb(159 159 159 / 11%);
+}
+
+#login {
+    width: 180px;
+    height: 85px;
+    background-color: #000;
+    font-size: 29px;
+    color: #A5A5A5;
+    border-radius: 9px;
+    border: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .box-container {
+        height: 500px;
+        width: 400px;
+    }
+
+    .body {
+        padding: 30px;
+    }
+
+    .logo {
+        width: 175px;
+    }
+
+    #login {
+        width: 150px;
+        height: 75px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .box-container {
+        height: 65%;
+        width: 100%;
+        border-radius: 0px;
+        background-color: #e5e5e53b;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    #login {
+        width: 130px;
+        height: 55px;
+    }
+
+    label {
+        color: #E5E5E5;
+    }
+
+    .input {
+        color: white;
+    }
+
+    .input::placeholder {
+        color: rgb(255, 255, 255);
+    }
+
+    .input-box::after {
+        background-color: white;
+    }
+}

@@ -1,0 +1,37 @@
+
+<svg width="250" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+    @keyframes spin {
+        from {
+          transform: rotateY(0);
+        }
+        to {transform: rotateY(360deg)}
+    }
+    #full{
+      animation-name: spin;
+      animation-iteration-count: infinite;
+      animation-duration: 3s;
+      transform-origin: 50% 50%;
+    }
+</style>
+    <defs>
+      <ellipse id="ci" rx="20" ry="30" fill="#e5d549" stroke="#707070" />
+    </defs>
+    <defs>
+      <g id="try">
+        <line x1="0" y1="0" x2="90" y2="200" stroke="#e5d549" stroke-width="12" />
+        <line x1="0" y1="0" x2="-90" y2="200" stroke="#e5d549" stroke-width="12" />
+        <line x1="-45" y1="100" x2="45" y2="100" stroke="#e5d549" stroke-width="5" />
+
+        <use xlink:href="#ci" x="0" y="0" />
+        <use xlink:href="#ci" x="45" y="100" />
+        <use xlink:href="#ci" x="90" y="200" />
+        <use xlink:href="#ci" x="-45" y="100" />
+        <use xlink:href="#ci" x="-90" y="200" />
+        
+      </g>
+    </defs>
+    <g id="full">
+        <use xlink:href="#try" x="85" y="50" transform ="rotate(-10 85 50)"/>
+    </g>  
+  </svg>
